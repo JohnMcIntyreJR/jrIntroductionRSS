@@ -1,2 +1,2 @@
 library("testthat")
-test_check("jrIntroduction")
+test_check("jrIntroductionRSS")
