@@ -1,0 +1,18 @@
+Package: jrIntroductionRSS
+Type: Package
+Title: Jumping Rivers: Introduction to R
+Version: 0.1.20
+Authors@R: c(person("Jamie", "Owen", email="jamie@jumpingrivers.com", role = c("aut", "cre")),
+              person("Colin", "Gillespie", email="colin@jumpingrivers.com", role = "aut"))
+Description: Practicals and data sets for the Introduction to R course run by Jumping
+  Rivers.
+URL: https://www.jumpingrivers.com/
+License: GPL-3
+Depends:
+    R (>= 3.2.0)
+Imports:
+    ggplot2movies, dplyr (>= 0.7.0), readr, readxl
+Suggests:
+    knitr, tufte, rmarkdown, formatR, testthat, lintr, hrbrthemes, gridExtra
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
