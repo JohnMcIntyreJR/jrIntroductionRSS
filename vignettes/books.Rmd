@@ -1,0 +1,47 @@
+---
+title: "Recommended R text books"
+author: "Jumping Rivers"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{books}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### Introductory texts
+
++ [Hands-On Programming with R](http://amzn.to/2lt6rzg) by Grolemund. £20.
+    + __Pros__: An excellent book. 
+* [R in a Nutshell](http://amzn.to/2mspZDu) by Adler. \pounds29
+    + __Pros__: An excellent reference. My current favourite R book.
+    + __Cons__: Only suitable for those with a previous (strong) computer
+    background.
+* [R for data science](http://amzn.to/2lLp50E) by Wickham & Grolemund. £20
+    + __Pros__: Clearly written, an excellent book.
+    + __Cons__: Well not advanced, it does assume a basic level of R programming.
+* A [first course in statistical programming](http://amzn.to/2n2gSpX) with R by Braun & Murdoch. £20
+    + __Pros__: I quite like this book (hence the reason I put it on my list). It
+    has a nice collection of exercises, it "looks nice"" and doesn't assume
+    knowledge of programming. It also doesn't assume (or try to teach) any
+    statistics.
+    + __Cons__: When describing `for()` loops and functions the examples aren't
+    very statistical. For example, it uses Fibonacci sequences in the while loop
+    section and the sieve of Eratosthenes for `if()` statements.
+* [An introduction to R](http://amzn.to/2lsRQnh) by Venables \& Smith. \pounds13
+    + __Pros__: Simple, short and to the point. Free copies available. Money from the book goes to the R project.
+    + __Cons__: More an R reference guide than a textbook.
+* [Introduction to scientific programming and simulation using R](http://amzn.to/2lsU8mG) by Jones,
+  Maillardet and Robinson. \pounds48
+    + __Pros__: A nice book that teaches R programming. Similar to the Braun \&
+    Murdoch book.
+    + __Cons__: A bit pricey.
+    
+### Advanced programing
+
+  * [Efficient R programming](http://amzn.to/2m8sYi1) by Gillespie & Lovelave. £20.
+    + __Pros__: Takes the viewpoint of a non-programmer coming to the world of R.
+    + __Cons__: Since one of our consultants wrote the book, we're slightly biased ;)
+    
+  * [Advanced R programming](http://amzn.to/2n2xBJD) Wickham. £35
+    + __Pros__: A must for all advanced programmers.
+    + __Cons__: Not a downside, but focuses on the notes and bolts of the language.

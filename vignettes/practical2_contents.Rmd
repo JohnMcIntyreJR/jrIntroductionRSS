@@ -1,0 +1,116 @@
+```{r, include = FALSE, cache = FALSE}
+library(knitr)
+# opts_knit$set(out.format = "latex")
+#knit_theme$set(knit_theme$get("greyscale0"))
+
+options(replace.assign=FALSE,width=50)
+
+opts_chunk$set(fig.path='figure/graphics-', 
+               cache.path='cache/graphics-', 
+               fig.align='center', 
+               dev='pdf', fig.width=5, fig.height=5, 
+               fig.show='hold', cache=FALSE, par=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+suppressPackageStartupMessages(library(dplyr))
+fig <- local({
+    i <- 0
+    ref <- list()
+    list(
+        cap=function(refName, text) {
+            i <<- i + 1
+            ref[[refName]] <<- paste0("Figure ",i)
+            paste("Figure ", i, ": ", text, sep="")
+        },
+        ref=function(refName) {
+            ref[[refName]]
+        })
+})
+
+# usage 
+# chunk options fig.cap = fig$cap(<label>, <caption>)
+# reference `r fig$ref(<label>)`
+```
+
+## A suggestion
+
+This is just a suggestion to try and help get you into "good habits" early. If I was sitting to take this practical now, I would start a new R script file. That way all of the work that you have done associated with today's course is in one place, and the code for each of the practicals is separate from one another. This might feel a bit tedious right now, but as the amount of code you write and number of projects you take part in increases it will pay off to have a structured workflow. 
+
+
+# Data frames 
+
+For this set of questions we will use the movies data from the IMDB database. This data is contained in a package called `ggplot2movies`. To load the data into your current session you can use
+
+```{r, echo=TRUE}
+data(movies, package = "ggplot2movies")
+```
+
+(1)  Use the `head()` function to inspect the top of the data, this can help give you a feel for what the data looks like and what variables are contained within the data?
+
+    ```{r}
+    head(movies)
+    ```
+
+(1) How many films and how many variables are in this data set?
+    
+    ```{r}
+    dim(movies)
+    ```
+
+(1) Recall that if I want to pull out a single column, or variable, from a data frame we can use `$`. To extract the titles from this data set we write `movies$title`.^[If you can't remember what the names of the columns are, you can use `colnames(movies)` to find out.] Using `mean()` and `median()` calculate these summary statistics for the film lengths
+
+    ```{r}
+    mean(movies$length)
+    median(movies$length)
+    ```
+
+(1) What year is the oldest film in the data set from?
+
+    ```{r}
+    min(movies$year)
+    ```
+
+(1) How long is the longest film?
+
+    ```{r}
+    max(movies$length)
+    ```
+
+(1) What is the standard deviation of the film ratings?
+
+    ```{r}
+    sd(movies$rating)
+    ```
+    
+(1) How many Action films are there in the data? (There is a 1 in the action column if it is an action film)
+
+    ```{r}
+    table(movies$Action)
+    ```
+
+# Solutions
+
+Solutions to the practical questions are contained within the package
+
+```{r, eval= FALSE, echo = TRUE}
+vignette("solutions2", package = "jrIntroduction")
+```
+
+
+
+
+<!-- (1) You can use `table()` on more than one column at once by just adding extra columns as arguments. For example `table(movies$mpaa, movies$Action)` would tell me how many action and non action films there are for each of the mpaa ratings. How many romantic comedy films are there? i.e a 1 in the Romance column and a 1 in the Comedy column? -->
+
+<!--     ```{r} -->
+<!--     table(movies$Romance, movies$Comedy) -->
+<!--     ``` -->
+
+<!-- (1) When the values are similar in each variable in the table, it can be difficult to tell which dimension (rows or columns) corresponds to which variable. To aid this there is an argument to the `table()` function, `dnn` which allows us to provide a vector of names. Try  -->
+
+<!--     ```{r, echo=TRUE} -->
+<!--     table(movies$Romance, movies$Comedy, dnn = c("Romance","Comedy")) -->
+<!--     ``` -->
+<!-- (1) How many people cast their vote on a film on average? -->
+
+<!--     ```{r} -->
+<!--     mean(movies$votes) -->
+<!--     ``` -->
