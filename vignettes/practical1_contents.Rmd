@@ -50,7 +50,7 @@ To send this code from the editor to be run by R you have a few options:
 Make sure that you have the course package loaded into the current session. Instructions on how to install the package are contained in the appendix to the course notes. You should only need to install a package once using `install.packages()` and then we need to use `library()` in every session or script that we want to use the functionality of that package.
 
 ```{r, echo=TRUE}
-library("jrIntroduction")
+library("jrIntroductionRSS")
 ```
 
 # Vectors
@@ -61,7 +61,7 @@ Write the following code in the editor and run it
 x1 = GetNumericVector()
 ```
 
-This code generates a large vector of random numbers such that everyone has the same.^[This function is part of the course package `jrIntroduction`, you can view it's help page if you like `r knitr::inline_expr('?GetNumericVector()')`]
+This code generates a large vector of random numbers such that everyone has the same.^[This function is part of the course package `jrIntroductionRSS`, you can view it's help page if you like `r knitr::inline_expr('?GetNumericVector()')`]
 
   (1) How many elements are in `x1`? (i.e What is the length of `x1`)
   
@@ -105,7 +105,7 @@ This code generates a large vector of random numbers such that everyone has the 
 The following code will load a data set into your current session which contains a vector of frequencies of names of babies born in the US in 2000.
 
 ```{r, echo = TRUE}
-data(names, package = "jrIntroduction")
+data(names, package = "jrIntroductionRSS")
 ```
 
 The vector loaded into the session is called `names` and is the subject of the following questions
@@ -136,5 +136,5 @@ The vector loaded into the session is called `names` and is the subject of the f
 Solutions to the practical questions are contained within the package
 
 ```{r, eval= FALSE, echo = TRUE}
-vignette("solutions1", package = "jrIntroduction")
+vignette("solutions1", package = "jrIntroductionRSS")
 ```

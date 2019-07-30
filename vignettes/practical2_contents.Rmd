@@ -92,7 +92,7 @@ data(movies, package = "ggplot2movies")
 Solutions to the practical questions are contained within the package
 
 ```{r, eval= FALSE, echo = TRUE}
-vignette("solutions2", package = "jrIntroduction")
+vignette("solutions2", package = "jrIntroductionRSS")
 ```
 
 

@@ -36,7 +36,7 @@ fig <- local({
 We will continue to investigate the movies data from earlier. Make sure that you have the data loaded into the session as part of your new script (if you started one).
 
 ```{r, echo = TRUE, eval = TRUE}
-data(movies, package = "jrIntroduction")
+data(movies, package = "jrIntroductionRSS")
 ```
 
 ## Scatter plots
@@ -163,7 +163,7 @@ par(op)
 Run the folowing R code:
 
 ```{r, echo= TRUE}
-data(USnames,package = "jrIntroduction")
+data(USnames,package = "jrIntroductionRSS")
 ```
 
 The data frame `USnames` is a collection of names given to babies born in the US between 2011 and 2014. 
