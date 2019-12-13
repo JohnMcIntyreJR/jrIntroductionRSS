@@ -19,4 +19,3 @@
 #  png("mygraph.png", width=6*ppi, height=6*ppi, res=ppi)
 #  plot(1:10)
 #  dev.off()
-

@@ -17,10 +17,10 @@ GetDataFrame = function(seed=1) {
   data(movies, envir = environment())
   d = movies
   l = sample(50:100, 1)
-  del_rows = sample(1:nrow(d), l)
+  del_rows = sample(1:seq_len(d), l)
 
   d = d[-del_rows, ]
-  rownames(d) = 1:nrow(d)
+  rownames(d) = 1:seq_len(d)
 
   return(d)
 }
